@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid p-0">
+    <div class="position-relative d-flex align-items-center justify-content-center text-white" 
+         style="height: 450px; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085') center/cover no-repeat;">
+        <h1 class="fw-bold text-center px-3">ยินดีต้อนรับสู่เว็บไซต์ของรายวิชา ICT12367</h1>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="text-center mb-4">
+        <h3 class="fw-bold">ภาพกิจกรรม</h3>
+        <p class="text-muted mx-auto" style="max-width: 800px; font-size: 0.9rem;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Salius, minus. Corporis odio sit aliquam ex beatae a eveniet! Pariatur, ducimus?
+        </p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" class="img-fluid rounded-3 shadow-sm gallery-img" alt="img">
+        </div>
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" class="img-fluid rounded-3 shadow-sm gallery-img" alt="img">
+        </div>
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31" class="img-fluid rounded-3 shadow-sm gallery-img" alt="img">
+        </div>
+        
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3" class="img-fluid rounded-3 shadow-sm gallery-img" alt="img">
+        </div>
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf" class="img-fluid rounded-3 shadow-sm gallery-img" alt="img">
+        </div>
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb" class="img-fluid rounded-3 shadow-sm gallery-img" alt="img">
+        </div>
+
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd" class="img-fluid rounded-3 shadow-sm gallery-img" alt="img">
+        </div>
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" class="img-fluid rounded-3 shadow-sm gallery-img" alt="img">
+        </div>
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1506372023823-741c83b836fe" class="img-fluid rounded-3 shadow-sm gallery-img" alt="img">
+        </div>
+    </div>
+</div>
+
+<style>
+ 
+    .gallery-img {
+        width: 100%;
+        height: 200px; 
+        object-fit: cover;
+        transition: 0.3s;
+    }
+    .gallery-img:hover {
+        transform: translateY(-5px);
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+            <div class="card-header bg-primary py-3">
+                <h4 class="text-white mb-0 text-center fw-bold">ลงทะเบียนประชากร</h4>
+            </div>
+            <div class="card-body p-4 p-md-5 bg-white">
+                <form>
+                    <div class="mb-4">
+                        <label class="form-label fw-bold">ชื่อ-นามสกุล</label>
+                        <input type="text" class="form-control form-control-lg bg-light" placeholder="กรอกชื่อของคุณ">
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-bold">อายุ</label>
+                        <input type="number" class="form-control form-control-lg bg-light" placeholder="ระบุอายุ">
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg shadow-sm">บันทึกข้อมูล</button>
+                        <button type="reset" class="btn btn-outline-secondary">ล้างข้อมูล</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
