@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แบบฟอร์มบันทึกข้อมูลประชากร</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    /* ตั้งค่าสีปุ่มลงทะเบียน (สีชมพูเข้ม) */
+    .btn-pink {
+        background-color: #d82b88;
+        color: white;
+        border: none;
+    }
+    .btn-pink:hover {
+        background-color: #bc2575;
+        color: white;
+    }
+
+    /* ตั้งค่าสีปุ่มล้างข้อมูล (สีส้ม) */
+    .btn-orange {
+        background-color: #f9811b;
+        color: white;
+        border: none;
+    }
+    .btn-orange:hover {
+        background-color: #db7015;
+        color: white;
+    }
+
+    /* ปรับแต่ง Header Image */
+    .header-image-container {
+        position: relative;
+        text-align: center;
+        color: white;
+        margin-bottom: 2rem;
+    }
+    .header-image-container img {
+        width: 100%;
+        height: 200px; /* ปรับความสูงของรูป Header */
+        object-fit: cover;
+        filter: brightness(0.5); /* ทำให้รูปมืดลงเล็กน้อยเพื่อให้ตัวหนังสือชัดขึ้น */
+    }
+    .header-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    /* ปรับแต่งส่วนหัวของฟอร์ม (สีฟ้า) */
+    .card-header-blue {
+        background-color: #0d6efd;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+</style>
+</head>
+
+<body class="bg-light">
+
+    <div class="header-image-container">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Header Background">
+        <div class="header-text">
+            <h1 class="fw-bold">ยินดีต้อนรับสู่เว็บไซต์ของรายวิชา ICT12367</h1>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="card mx-auto shadow-sm border-0" style="max-width: 500px;">
+
+            <div class="card-header-blue rounded-top">
+                แบบฟอร์มบันทึกข้อมูลประชากร
+            </div>
+
+            <div class="card-body p-4">
+                <form method="post" action="/form/">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label class="form-label text-muted" style="font-size: 0.9rem;">ชื่อประชากร</label>
+                        <input type="text" class="form-control" name="name" placeholder="กรุณากรอกชื่อ-นามสกุล" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label text-muted" style="font-size: 0.9rem;">อายุ</label>
+                        <input type="number" class="form-control" name="age" placeholder="กรอกข้อมูลอายุเป็นตัวเลข" required>
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-3">
+                        <button type="submit" class="btn btn-pink px-4">ลงทะเบียน</button>
+                        <button type="reset" class="btn btn-orange px-4">ล้างข้อมูล</button>
+                    </div>
+                </form>
+
+                <hr class="mt-4 mb-3 text-muted">
+                
+                <div class="text-center">
+                    <a href="/" class="btn btn-secondary btn-sm px-3">กลับหน้าแรก</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
